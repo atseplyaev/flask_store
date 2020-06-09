@@ -3,10 +3,12 @@ from flask import Flask
 from flask_migrate import Migrate
 from store.models import db
 
+from store.views import bp
 
 def create_app(config_object_path = 'store.config.DevelopConfig'):
     app = Flask(__name__)
     app.config.from_object(config_object_path)
+    app.register_blueprint(bp)
 
     try:
         os.mkdir(app.instance_path)
@@ -25,4 +27,3 @@ def create_app(config_object_path = 'store.config.DevelopConfig'):
 if __name__ == '__main__':
     app = create_app()
     app.run()
-

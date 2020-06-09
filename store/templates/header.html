@@ -1,0 +1,21 @@
+<header>
+    <div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <div class="col-4 text-center">
+            <a class="text-dark header-logo" href="{{ url_for('index.index') }}">Simple demo store</a>
+        </div>
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link header-text text-dark" title="Главная" href="{{ url_for('index.index') }}">
+                        Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-text text-dark" title="Каталог" href="{{ url_for('index.products') }}">
+                        Каталог
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

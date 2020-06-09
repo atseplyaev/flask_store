@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Каталог товров
+{% endblock %}
+
+
+{% block content %}
+    <main role="main">
+        <section class="text-center" style="padding-top: 6rem; padding-bottom: 6rem; ">
+            <div class="container">
+                <h1 style="font-weight: 300">
+                    Simple store powered by Flask
+                </h1>
+                <p class="lead text-muted">
+                    Каталог товров демо магазина на фреймворке Flask
+                </p>
+            </div>
+        </section>
+        {% include 'product_items.html' %}
+    </main>
+{% endblock %}

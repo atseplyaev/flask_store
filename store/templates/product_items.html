@@ -1,0 +1,26 @@
+<div class="album bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                {% for product in products %}
+                <div class="card mb-4 shadow-sm">
+                    <div id="carouselImageControls" class="carousel slide" data-ride="carousel" data-interval=false>
+                        {% if product.image_url %}
+                        <img src="{{ product.image_url }}" class="d-block w-100" alt="...">
+                        {% else %}
+                        <img src="https://elk21.ru/assets/images/34534535.jpg" class="d-block w-100" alt="...">
+                        {% endif %}
+                    </div>
+                    <div class="card-body">
+                        <a class="card-text" href="{{ url_for('index.product', product_id = product.id ) }}"><h6>{{ product.name }}</h6></a>
+                        <p class="card-text">
+                            {{ product.description }}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+                {% endfor %}
+        </div>
+    </div>
+</div>
