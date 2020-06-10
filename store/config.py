@@ -8,6 +8,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, '..', 'store.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = os.urandom(24)
+    FLASK_ADMIN_SWATCH = 'cerulean'
 
 
 class DevelopConfig(Config):
