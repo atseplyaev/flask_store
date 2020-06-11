@@ -1,0 +1,59 @@
+<div class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-4 shadow-sm">
+                    {% if product.image_url %}
+                    <img src="{{ product.image_url }}" class="d-block w-100" alt="...">
+                    {% else %}
+                    <img src="https://elk21.ru/assets/images/34534535.jpg" class="d-block w-100" alt="...">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Описание товара
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Диагональ экрана</div>
+                                <div class="col-md-auto">-</div>
+                                <div class="col">{{ product.display_size }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Ядро процессора</div>
+                                <div class="col-md-auto">-</div>
+                                <div class="col">{{ product.cpu }}</div>
+                            </div>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Видеокарта</div>
+                                <div class="col-md-auto">-</div>
+                                <div class="col">{{ product.gpu }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Объём памяти жесткого диска </div>
+                                <div class="col-md-auto">-</div>
+                                <div class="col">{{ product.rom_size }} Гб</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Объём оперативной памяти</div>
+                                <div class="col-md-auto">-</div>
+                                <div class="col">{{ product.ram_size }} Гб</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

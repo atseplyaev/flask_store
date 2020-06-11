@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ product.name }}
+{% endblock %}
+
+
+{% block content %}
+    <main role="main">
+        <section class="text-center" style="padding-top: 6rem; padding-bottom: 6rem; ">
+            <div class="container">
+                <h1 style="font-weight: 300">
+                    {{ product.name }}
+                </h1>
+                <p class="lead text-muted">
+                    {{ product.description }}
+                </p>
+            </div>
+        </section>
+        {% include 'product_info.html' %}
+    </main>
+{% endblock %}

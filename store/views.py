@@ -14,3 +14,7 @@ def products_page():
     products = Product.query.all()
     return render_template('products.html', products=products)
 
+@bp.route('/products/<int:product_id>', endpoint='product')
+def products_page(product_id):
+    product = Product.query.first_or_404(product_id)
+    return render_template('product.html', product=product)
